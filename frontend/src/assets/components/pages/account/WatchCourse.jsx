@@ -4,7 +4,7 @@ const WatchCourse = () => {
 
     return (
         <div>
-        <h1>ChangePassword</h1>
+        <h1>WatchCourse</h1>
         </div>
     )
 }
