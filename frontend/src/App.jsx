@@ -1,14 +1,14 @@
 import { useState } from 'react' 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Home from './assets/components/pages/Home.jsx'
-import Courses from './assets/components/pages/Courses.jsx'
-import Detail from './assets/components/pages/Detail.jsx'
-import Login from './assets/components/pages/Login.jsx'
-import Register from './assets/components/pages/Register.jsx'
-import MyCourses from './assets/components/pages/MyCourses.jsx'
-import CoursesEnrolled from './assets/components/pages/account/CoursesEnrolled.jsx'
-import WatchCourse from './assets/components/pages/account/WatchCourse.jsx'
-import ChangePassword from './assets/components/pages/account/ChangePassword.jsx'
+import Home from "./components/pages/Home.jsx";
+import Courses from "./components/pages/Courses.jsx";
+import Detail from "./components/pages/Detail.jsx";
+import Login from './components/pages/Login.jsx'
+import Register from './components/pages/Register.jsx'
+import MyCourses from './components/pages/MyCourses.jsx'
+import CoursesEnrolled from './components/pages/account/CoursesEnrolled.jsx'
+import WatchCourse from './components/pages/account/WatchCourse.jsx'
+import ChangePassword from './components/pages/account/ChangePassword.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
