@@ -43,7 +43,7 @@ const Register = () => {
                                 </div>
 
                                 <div className='d-flex justify-content-center py-3'>
-                                    Already have account? &nbsp;<Link className='text-secondary' to={`/login`}> Login</Link>
+                                    Already have account? &nbsp;<Link className='text-secondary' to={`/account/login`}> Login</Link>
                                 </div>
                             </div>
                         </div>
