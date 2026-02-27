@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Layout from "../common/Layout.jsx";
-import UserSidebar from '../common/UserSidebar.jsx'; 
+import UserSidebar from '../../common/UserSidebar.jsx';
 import CourseEdit from '../../common/CourseEdit.jsx';
-import Layout from '../../common/Layout.jsx';
+import Layout from "../../common/Layout.jsx";
 
 const MyCourses = () => {
 
