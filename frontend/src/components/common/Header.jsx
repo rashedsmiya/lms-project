@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
            <Navbar expand="md" className="bg-white shadow-lg header py-3">
-                <Container >
+                <Container>
                     <Navbar.Brand href="/"><strong>Smart Learning</strong></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
@@ -27,7 +27,7 @@ const Header = () => {
                     <a href='/account/my-learning' className="btn btn-primary">My Account</a>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar>
+           </Navbar>
         </>
     )
 }
