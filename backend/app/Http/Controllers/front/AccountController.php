@@ -16,6 +16,7 @@ class AccountController extends Controller
 
             'name' => 'required|min:5',
             'email' => 'required|email|unique:users',
+            'password' => 'required|min:8|confirmed',
         ]);
 
         // This will return validator error
