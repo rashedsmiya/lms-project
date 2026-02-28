@@ -1,7 +1,40 @@
 import React from 'react'
 import Layout from '../common/Layout'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
+import { apiUrl } from '../common/Config'
 const Login = () => {
+
+    const navigate = useNavigate();
+    const {
+        handleSubmit, register, formState: { errors }, setError
+    } = useForm();
+
+     const onSubmit = async (data) => {
+        // console.log(data);
+       await fetch(`${apiUrl}/login`, {   
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(data)
+    })
+     .then(res => res.json())
+     .then(result => {
+        console.log(result);
+        if (result.status === 200){
+          //  navigate('/account/login');
+        } else {
+            const errors = result.errors; 
+            Object.keys(errors).forEach(field => {
+                setError(field, { type: 'server', message: errors[field][0]});
+            })
+        }
+     })
+    }
+
     return (
         <Layout>
             <div className='container py-5 mt-5'>
@@ -13,14 +46,40 @@ const Login = () => {
                                 <div className='mb-3'>
                                     <label className='form-label' htmlFor="email">Email</label>
                                     <input
-                                        type="text" className='form-control' placeholder='Email' />
+                                           
+                                           {
+                                            ...register('email', {
+                                                required: "The email field is required.",
+                                                pattern: {
+                                                    value: /^\S+@\S+$/i,
+                                                    message: "Please enter a valid email address."
+                                                }
+                                                
+                                            })
+                                           }
+
+                                        type="text" className={`form-control ${errors.email ? 'is-invalid' : ''}`}
+                                        placeholder='Email' />
+                                        {
+                                            errors.email && <small className='text-danger'>{errors.email.message}</small>
+                                        }
+
                                 </div>
 
                                 <div className='mb-3'>
                                     <label className='form-label' htmlFor="password">Password</label>
                                     <input
-                                        type="password" className='form-control'
+                                    {
+                                        ...register('password', {
+                                            required: "The password field is required.",
+                                        })
+                                    }
+                                        type="password"
+                                        className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                                         placeholder='Password' />
+                                        {
+                                            errors.password && <small className='text-danger'>{errors.password.message}</small>
+                                        }
                                 </div>
 
                                 <div className='d-flex justify-content-between align-items-center'>
