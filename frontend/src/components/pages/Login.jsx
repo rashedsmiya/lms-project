@@ -32,7 +32,7 @@ import { apiUrl } from '../common/Config';
             token: result.token,
            }
            localStorage.setItem('userInfoLms', JSON.stringify(userInfo)); 
-           navigate('/account/my-learning');
+           navigate('/account/dashboard');
         } else {
             const errors = result.errors; 
             Object.keys(errors).forEach(field => {

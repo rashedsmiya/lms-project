@@ -61,7 +61,7 @@ class AccountController extends Controller
             
             $user = User::find(Auth::user()->id);
 
-            $token = $user->createToken('auth_token')->plainTextToken;
+            $token = $user->createToken('token')->plainTextToken;
 
             return response()->json([
                 'status' => 200,
