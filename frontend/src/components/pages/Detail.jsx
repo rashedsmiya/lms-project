@@ -7,7 +7,7 @@ const Detail = () => {
     const rating = 5.0;
 
     return (
-        <Layout className='container pb-5 pt-3'>
+        <Layout className='pb-5 pt-3 px-8'>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="/">Home</a></li>
@@ -15,7 +15,7 @@ const Detail = () => {
                     <li className="breadcrumb-item active" aria-current="page">Web Development Bootcamp 2025</li>
                 </ol>
             </nav>
-            <div className='row my-5'>
+            <div className='row my-5 container mx-auto '>
                 <div className='col-lg-8'>
                     <h2>Web Development Bootcamp 2025</h2>
                     <div className='d-flex'>
