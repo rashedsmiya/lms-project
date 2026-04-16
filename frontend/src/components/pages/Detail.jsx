@@ -7,7 +7,7 @@ const Detail = () => {
     const rating = 5.0;
 
     return (
-        <Layout className='pb-5 pt-3 px-8'>
+        <Layout className='pb-5 pt-3 px-8 container p-5'>
             <nav aria-label="breadcrumb">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><a href="/">Home</a></li>
