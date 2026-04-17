@@ -26,7 +26,7 @@ return new class extends Migration
                $table->enum('is_featured',['yes','no'])->nullable()->default('no');
                $table->string('image')->nullable();
                $table->timestamps();
-           });
+           }); 
        }
    }
 
