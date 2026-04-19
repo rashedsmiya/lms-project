@@ -28,7 +28,7 @@ class AccountController extends Controller
             ],400);
         }
 
-        // Now Save info in Database
+        // Now Save user info in Database
         $user = new User();
         $user->name = $request->name;
         $user->email = $request->email;

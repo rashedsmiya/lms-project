@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('lesson_id')->constrained()->onDelete('cascade');
             $table->enum('is_completed',['yes','no'])->default('no');
             $table->enum('is_last_watched',['yes','no'])->default('no');
-            $table->timestamps();
+            $table->timestamps(); 
         });
     }
 
